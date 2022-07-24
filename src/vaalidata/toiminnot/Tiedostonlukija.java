@@ -21,7 +21,7 @@ public class Tiedostonlukija {
     }
 
     public ArrayList<Ehdokas> lueTiedosto() {
-        try (Scanner tiedostonLukija = new Scanner(new File("ehdokkaat.csv"))) {
+        try (Scanner tiedostonLukija = new Scanner(new File("data/ehdokkaat.csv"))) {
             int id = 0;
             while (tiedostonLukija.hasNextLine()) {
                 Ehdokas ehdokas = new Ehdokas();

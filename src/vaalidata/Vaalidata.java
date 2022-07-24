@@ -9,38 +9,39 @@ public class Vaalidata {
         Komennot komennot = new Komennot();
 
         System.out.println(
-                "------------------------------------------------------------------------\n" +
-                "Tervetuloa käyttämään VAALIDATA2019-ohjelmaa.\n\n" +
-                "Komennot:\n" +
-                "- 'puolueet': Listaa vaaleihin osallistuvat puolueet\n" +
-                "- 'vaalipiirit': Listaa Suomen vaalipiirit \n" +
-                "- 'ehdokkaat puolueittäin': Laskee ja tulostaa ehdokkaat puolueittain\n" +
-                "- 'ehdokkaat vaalipiireittain': Laskee ja tulostaa ehdokkaat vaalipiireittäin\n" +
-                "- 'lopeta': Lopettaa ohjelman suorituksen\n\n" +
-                "------------------------------------------------------------------------\n"
-                );
+            "------------------------------------------------------------------------\n" +
+            "Tervetuloa käyttämään VAALIDATA2019-ohjelmaa.\n\n" +
+            "Komennot:\n" +
+            "- 0: Lopettaa ohjelman suorituksen\n" +
+            "- 1: Listaa vaaleihin osallistuvat puolueet\n" +
+            "- 2: Listaa Suomen vaalipiirit \n" +
+            "- 3: Laskee ja tulostaa ehdokkaat puolueittain\n" +
+            "- 4: Laskee ja tulostaa ehdokkaat vaalipiireittäin\n" +
+            "------------------------------------------------------------------------\n"
+        );
 
         ohjelma: while (true) {
             System.out.print("Syötä komento: ");
             String komentosyote = syote.nextLine();
 
             switch (komentosyote) {
-                case "lopeta":
+                case "0":
+                    syote.close();
                     break ohjelma;
-                    
-                case "puolueet":
+
+                case "1":
                     komennot.listaaPuolueet();
                     break;
-                    
-                case "vaalipiirit":
+
+                case "2":
                     komennot.listaaVaalipiirit();
                     break;
-                
-                case "ehdokkaat puolueittain":
+
+                case "3":
                     komennot.ehdokkaatPuolueittain();
                     break;
 
-                case "ehdokkaat vaalipiireittain":
+                case "4":
                     komennot.ehdokkaatVaalipiireittain();
                     break;
                   
